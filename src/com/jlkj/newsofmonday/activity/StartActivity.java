@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 /**
@@ -16,7 +17,8 @@ import android.widget.RelativeLayout;
 
 public class StartActivity extends Activity{
 	
-	private RelativeLayout myRelativeLayout;
+	private RelativeLayout myRelativeLayout; 
+	private ImageView myImageView; 
 	
 
 	@Override
@@ -27,6 +29,7 @@ public class StartActivity extends Activity{
 		setContentView(R.layout.activity_start);
 		
 		myRelativeLayout = (RelativeLayout)findViewById(R.id.myR);
+		myImageView = (ImageView)findViewById(R.id.imageView1);
 		
 		new Thread(new Runnable() {
 			
