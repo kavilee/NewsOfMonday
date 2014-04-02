@@ -1,6 +1,5 @@
 package com.example.newsofmonday;
 
-;
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
