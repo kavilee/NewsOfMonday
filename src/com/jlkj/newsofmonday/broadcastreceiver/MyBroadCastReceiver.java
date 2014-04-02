@@ -1,8 +1,9 @@
-package com.example.newsofmonday.BroadCastReceiver;
+package com.jlkj.newsofmonday.broadcastreceiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 
 public class MyBroadCastReceiver extends BroadcastReceiver{
 	

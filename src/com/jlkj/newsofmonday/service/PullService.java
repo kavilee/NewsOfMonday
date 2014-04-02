@@ -1,4 +1,4 @@
-package com.example.newsofmonday.service;
+package com.jlkj.newsofmonday.service;
 
 import android.app.Service;
 import android.content.Intent;

@@ -1,13 +1,14 @@
-package com.example.newsofmonday.Activity;
+package com.jlkj.newsofmonday.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-public class InformationActivity extends Activity{
+public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 	}
+
 }
