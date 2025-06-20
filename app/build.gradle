@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 33 // Target a modern SDK
+    namespace "com.example.newsofmonday" // From AndroidManifest.xml
+
+    defaultConfig {
+        applicationId "com.example.newsofmonday"
+        minSdk 21 // Update minSdk to Lollipop (API 21)
+        targetSdk 33 // Target a modern SDK
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false // Keep it simple for now
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro' // Standard Proguard setup
+        }
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true // Necessary for Robolectric
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    // For older projects, you might need to handle resource conflicts
+    // or specific source sets if the structure was non-standard.
+    // For now, assume standard Eclipse structure.
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets'] // if any assets exist
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.9.0' // or a newer stable version
+    implementation 'androidx.appcompat:appcompat:1.6.1' // or a newer stable version
+    implementation 'com.google.android.material:material:1.10.0' // for Material Design components
+    // Add other AndroidX libraries as needed, e.g., for ConstraintLayout, Lifecycle, etc.
+    // implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.mockito:mockito-core:3.12.4' // Optional, but good to have
+    // For testing Android components locally (like Intent)
+    testImplementation 'org.robolectric:robolectric:4.9.2' // Using Robolectric to allow Android SDK classes in unit tests
+}
